@@ -2,6 +2,6 @@
 
 Current scope is:
 
-[OCR project](_layouts/ocr_poc.md) 
+[OCR project](_layouts/ocr_poc.html) 
 
-[What Benz](_layouts/what_benz.md) 
+[What Benz](_layouts/what_benz.html) 
