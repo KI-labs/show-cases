@@ -1,8 +1,3 @@
----
-title: KI labs showcases
----
-
-
 # Welcome to KI labs showcases
 
 Current scope is:
