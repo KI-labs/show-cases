@@ -1,8 +1,3 @@
----
-title: what benz
----
-
-
 # what-benz-showcase
 What Benz is a deep learning-based solution for recognizing Mercedes Benz cars from pictures taken using a mobile app
 

@@ -1,8 +1,3 @@
----
-title: OCR POC
----
-
-
 # Optical character recognition poc 
 
 This is a proof of concept for the task of detecting weights in engineering 
