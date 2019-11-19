@@ -1,5 +1,5 @@
 # What Benz
-*What Benz* is a deep learning-based solution for recognizing Mercedes Benz cars from pictures taken using a mobile app
+*What Benz* is a deep learning-based solution for recognizing Mercedes Benz cars from pictures taken using a mobile app.
 
 <p align="center">
     <img src="images/what_benz_poc.png" alt="what benz poc" width="720px" align="middle"/>

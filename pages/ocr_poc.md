@@ -1,6 +1,8 @@
-# Where weight
+# Where Weight
 
 *Where Weight* is a demo of an app that could be used for extracting information from engineering drawings.
+
+<img width="800" alt="teaser" src="./data/figures/example.gif">
 
 ## Introduction:
 Finding and getting information from unstructured data sources like images, drawings, scanned documents is a quite challenging and non-trivial task. Existing solutions like AutoCAD, Adobe or cloud OCR (Azure/AWS/GCP) don't work well enough for specific tasks because of their too generic approach.
@@ -16,8 +18,6 @@ This makes building an OCR (Optical Character Recognition) system for a specific
  - mapping bounding box content to text characters
  
 The solution also uses an additional algorithm that applies to a list of bounding box locations and the corresponding text contents and detects the weight units and weight values of the drawing.      
-  
-<img width="800" alt="teaser" src="./data/figures/example.gif">
 
 ### Technical overview:
 
