@@ -1,6 +1,6 @@
 # Where weight
 
-*Where weight* is a demo of an app that could be used for extracting information from engineering drawings.
+*Where Weight* is a demo of an app that could be used for extracting information from engineering drawings.
 
 ## Introduction:
 Finding and getting information from unstructured data sources like images, drawings, scanned documents is a quite challenging and non-trivial task. Existing solutions like AutoCAD, Adobe or cloud OCR (Azure/AWS/GCP) don't work well enough for specific tasks because of their too generic approach.
@@ -11,7 +11,7 @@ This makes building an OCR (Optical Character Recognition) system for a specific
 
 # How does it work?
 
-*Where weight* uses several deep learning network models for:
+*Where Weight* uses several deep learning network models for:
  - text bounding boxes detection 
  - mapping bounding box content to text characters
  
@@ -19,13 +19,13 @@ The solution also uses an additional algorithm that applies to a list of boundin
   
 <img width="800" alt="teaser" src="./data/figures/example.gif">
 
+### Technical overview:
+
 <p align="center">
   <img src="./data/figures/ocr_poc.png" alt="weight extraction workflow"/>
 </p>
 
-
-### Technical overview:
-*Where weight* is composed of several steps:
+*Where Weight* is composed of several steps:
 
   - **Text detection**      
     A pretrained [CRAFT](https://github.com/clovaai/CRAFT-pytorch) 
@@ -66,6 +66,6 @@ The solution also uses an additional algorithm that applies to a list of boundin
 
 ### Future steps
 
-In general, *Where weight* solution can be extended to extract any specific information from a technical drawing: like the name of an element, a date, an author, key-value pairs, etc.
+In general, *Where Weight* solution can be extended to extract any specific information from a technical drawing: like the name of an element, a date, an author, key-value pairs, etc.
 
 It's also possible to automate data extraction to scale document processing workflow and/or add some addition preprocessing steps to achieve better quality in recognition, for example, orientation detection, image rotation, etc.
