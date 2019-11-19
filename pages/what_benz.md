@@ -1,4 +1,4 @@
-# what-benz-showcase
+# what-benz
 *What Benz* is a deep learning-based solution for recognizing Mercedes Benz cars from pictures taken using a mobile app
 
 <p align="center">
@@ -8,24 +8,22 @@
 ## Introduction:
 The variety and the similarities between the cars model make recognizing a particular car’s model a challenge for many people. Imagine a scenario where a person sees a car on the street and likes it. The person would take a picture of the vehicle, search for it somewhere on the internet or by asking a car dealer, explore some properties such as the engine, number of sets, possible colors, and finally get immediately informed about the price range for different options. *What Benz* saves you your valuable time and puts all that information just in a few seconds in your hand by just taking a picture of the car.
 
-In this version of the app, we are using two types approaches:
+In this version of the app, we are using two types of approaches:
  - a deep learning model that recognizes the new released Mercedes Benz cars during the last three years
  - an unsupervised learning model that groups the Mercedes Benz cars into different clusters
  
 *What Benz* app uses information directly from a production cars' market database. Therefore, the app can provide the user with information about the availability of the vehicle and the selling points in the target market.
 
 Some usecases where *What Benz* app could be used:
- - getting car's details info
+ - getting car's details info and store the history of models
  - getting the class of a model
  - getting info about car's availability on the market
  - get the closest car (e.g. take picture of *Tesla* and get a closest model from *Mercedes Benz's* model range)
  - getting closest car's availability info on the market
- - getting the nearest dealer with available cars of this type based on user's location
+
 
 ## How does it work?
 It is straight forward. The user runs the app and takes a picture of a car on the street. The app sends a request to the backend where the model runs. The model predicts the most appropriate class of vehicle and sends back to the user the prediction together with all relevant information about the model.
-
-## Workflow:
 
 <p align="center">
     <img src="images/what-benz-workflow.png" alt="what benz workflow" width="920px" align="middle"/>
@@ -72,15 +70,18 @@ Fine-tuned model was served using `Azure ML Services`. This [tutorial](https://d
 
 K-Means clustering method was used to group the Mercedes Benz cars into different clusters. The clustering was done based on the car's properties such as body type, model, price, etc.
 
+### Future steps
+
+Extending the current solution with additional data sources (about user, location, market, etc.) will enable more use-cases for *What Benz*, for example:
+- recommend a specific car based on a history of taken pictures
+- predict car availability and inform the user about it
+- inform the user about changing a price or discounts for certain car or similar models
+- getting the nearest dealer with available cars of this type based on the user's location
+ 
+
 ### Tech stack
-#### Data stack
-- Python
-- Flask
 - Fast.ai, PyTorch
 - Azure ML services
-- Jupyter notebooks
-
-#### Mobile STACK
 - iOS, Android Apps, Web version
 - Flutter Framework
 - Master Data Integration via API
