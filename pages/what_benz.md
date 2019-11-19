@@ -77,7 +77,7 @@ Extending the current solution with additional data sources (about user, locatio
 - predict car availability and inform the user about it
 - inform the user about changing a price or discounts for certain car or similar models
 - getting the nearest dealer with available cars of this type based on the user's location
- 
+- *What Tires* extension. Identify/recommend accessories.
 
 ### Tech stack
 - Fast.ai, PyTorch
