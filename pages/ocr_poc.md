@@ -4,14 +4,14 @@
 
 <img width="800" alt="teaser" src="./data/figures/example.gif">
 
-## Introduction:
+## Introduction
 Finding and getting information from unstructured data sources like images, drawings, scanned documents is a quite challenging and non-trivial task. Existing solutions like AutoCAD, Adobe or cloud OCR (Azure/AWS/GCP) don't work well enough for specific tasks because of their too generic approach.
 
 Adopting a standard approach for the real-life situation may also require manual post-processing which makes document processing workflow not scalable. Or an addition preprocessing step to improve the quality of data extraction: sometimes an input document may have a poor resolution or could also be taken at a certain angle which makes generic approaches not applicable directly. 
 
 This makes building an OCR (Optical Character Recognition) system for a specific goal relevant and actual task. It may require a complex approach for the entire problem and usage of different processing frameworks from classical Computer Vision to modern Deep Learning tools.
 
-# How does it work?
+## How does it work?
 
 *Where Weight* uses several deep learning network models for:
  - text bounding boxes detection 
@@ -19,7 +19,7 @@ This makes building an OCR (Optical Character Recognition) system for a specific
  
 The solution also uses an additional algorithm that applies to a list of bounding box locations and the corresponding text contents and detects the weight units and weight values of the drawing.      
 
-### Technical overview:
+## Technical overview
 
 <p align="center">
   <img src="./data/figures/ocr_poc.png" alt="weight extraction workflow"/>
@@ -64,7 +64,7 @@ The solution also uses an additional algorithm that applies to a list of boundin
     
     The cases where the weight value and weight unit are in the same/different bounding boxes are supported. For example, in case when the weight unit and weight value are in the same bounding box the following patterns can be detected: `2.35 g`, `3.78 kg`, `7,87 kg`, `9 g`.
 
-### Future steps
+## Future improvements
 
 In general, *Where Weight* solution can be extended to extract any specific information from a technical drawing: like the name of an element, a date, an author, key-value pairs, etc.
 

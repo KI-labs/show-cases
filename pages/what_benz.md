@@ -5,7 +5,7 @@
     <img src="images/what_benz_poc.png" alt="what benz poc" width="720px" align="middle"/>
 </p>
 
-## Introduction:
+## Introduction
 The variety and the similarities between the cars model make recognizing a particular car’s model a challenge for many people. Imagine a scenario where a person sees a car on the street and likes it. The person would take a picture of the vehicle, search for it somewhere on the internet or by asking a car dealer, explore some properties such as the engine, number of sets, possible colors, and finally get immediately informed about the price range for different options. *What Benz* saves you your valuable time and puts all that information just in a few seconds in your hand by just taking a picture of the car.
 
 In this version of the app, we are using two types of approaches:
@@ -29,7 +29,7 @@ It is straight forward. The user runs the app and takes a picture of a car on th
     <img src="images/what-benz-workflow.png" alt="what benz workflow" width="920px" align="middle"/>
 </p>
 
-## Technical overview:
+## Technical overview
 ### Pre-trained model
 A standard pre-trained [ResNet34](https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py) model was used for the *what benz* app. The model was fined tuned using a custom dataset (see below).
 
@@ -66,11 +66,11 @@ The quality of the fine-tuned model reaches 86%
 
 Fine-tuned model was served using `Azure ML Services`. This [tutorial](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-custom-docker-image) demonstrates how to deploy a model that was trained outside `Azure ML Services`. 
    
-## Unsupervised learning model:
+### Unsupervised learning model
 
 K-Means clustering method was used to group the Mercedes Benz cars into different clusters. The clustering was done based on the car's properties such as body type, model, price, etc.
 
-### Future steps
+## Future improvements
 
 Extending the current solution with additional data sources (about user, location, market, etc.) will enable more use-cases for *What Benz*, for example:
 - recommend a specific car based on a history of taken pictures
@@ -79,7 +79,7 @@ Extending the current solution with additional data sources (about user, locatio
 - getting the nearest dealer with available cars of this type based on the user's location
 - *What Tires* extension. Identify/recommend accessories.
 
-### Tech stack
+## Tech stack
 - Fast.ai, PyTorch
 - Azure ML services
 - iOS, Android Apps, Web version
