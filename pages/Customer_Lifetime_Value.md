@@ -29,6 +29,11 @@ which raises the question: does the business owner acquire many new customers, o
 The histogram of the recency, figure 2, shows that many of the customers have a recency fewer than 10 weeks. Putting it together with the histogram of the age 
 T, figure 3, we can see that many of the old customers haven't shown up anymore. Active customers are mainly customers who are acquired recently.
 
+<img width="400" alt="figure 2. The histogram of recency in logarithmic scale" src="./data/figures/clv_figures/fig2_recency_hist.png">
+<em>figure 2. The histogram of recency in logarithmic scale</em>
+
+<img width="400" alt="figure 3. The histogram of age:T in logarithmic scale" src="./data/figures/clv_figures/fig3_age_hist.png">
+<em>figure 3. The histogram of age:T in logarithmic scale</em>
 
 The average spend (monetary value) histogram, figure 4, shows that most of the customers spend less than 1000 Euro on average. However, there are a considerable number of customers who spend much more than 1000 Euro on average. 
 It is interesting to understand how such information affects the CLV values.
