@@ -23,7 +23,7 @@ Since the dataset contains a wide range of values, I use the logarithmic scale t
 The histogram of the frequency, figure 1, shows that many customers have 0 or 1 transaction frequency, 
 which raises the question: does the business owner acquire many new customers, or an of those customers did not show up anymore?
 
-<img width="800" alt="figure 1. The histogram of frequency in logarithmic scale" src="./data/figures/clv_figures/fig1_frequency_hist.png">
+<img width="250" alt="figure 1. The histogram of frequency in logarithmic scale" src="./data/figures/clv_figures/fig1_frequency_hist.png">
 <em>figure 1. The histogram of frequency in logarithmic scale</m>
 
 
