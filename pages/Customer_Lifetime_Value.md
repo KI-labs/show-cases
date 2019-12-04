@@ -24,8 +24,7 @@ The histogram of the frequency, figure 1, shows that many customers have 0 or 1 
 which raises the question: does the business owner acquire many new customers, or an of those customers did not show up anymore?
 
 <img width="400" alt="figure 1. The histogram of frequency in logarithmic scale" src="./data/figures/clv_figures/fig1_frequency_hist.png">
-<em>figure 1. The histogram of frequency in logarithmic scale</m><br/>
-
+<em>figure 1. The histogram of frequency in logarithmic scale</em>
 
 The histogram of the recency, figure 2, shows that many of the customers have a recency fewer than 10 weeks. Putting it together with the histogram of the age 
 T, figure 3, we can see that many of the old customers haven't shown up anymore. Active customers are mainly customers who are acquired recently.
