@@ -1,24 +1,69 @@
-# Preprocessing and visualization of vehicle telematics data  
+# Collection, preprocessing and visualization of vehicle telematics data
 
-The task was to preprocess large amount of telematics data from vehicles and visualize it 
-in a way that can allow business people to explore it. The data was stored in an Azure Data 
-Lake. Data preprocessing scala/pyspark jobs were executed using an Azure Databricks 
-platform. The size of the output data was significantly smaller than that of the 
-input data which allowed us to store the results in a postgres database. For example, 
-the output data could contain information about the places where the 
-vehicles tend to stop, to fuel or to load/unload goods. 
+The task of the project was to collect and store vehicle telematics data
+from several continents in a way that the access control among members
+of a big organization can be easily managed and different data-supported
+ideas/hypotheses can be rapidly tested.
 
-The postGIS extension of a PostgreSQL DB allowed us to do efficient location queries. 
-A typical example is finding points of interest within a given distance from a given point
-or from a vehicle driving trajectory. To these results we can add results from using other 
-APIs like Google Places. 
+In the following we will describe a use-case derived from analysing the
+data that was collected: the determination and visualization of the
+places where the vehicles tend to stop, to fuel, to load unload goods;
+as well as gathering an additional information about the these places. 
 
-In order to allow the business people to explore the data we have created a React based 
-UI. The rendering of the 3D graphics is done with libraries like 
-[React-map-gl](https://uber.github.io/react-map-gl/#/) and [Deck-gl](https://deck.gl/#/).
-Examples can be found in the screenshots below:
+## How does it work 
 
-### Explore individual vehicle trips
+
+### Architecture 
+
+<br>
+<img src="data/figures/tdh/tdh diagram.jpg" alt="tdh diagram" width="720"/>
+
+All of the components are running inside an Azure subscription.
+
+- Event Hubs are used to collect vehicle streaming data (which at the
+  moment is not real-time data).
+
+- We have several clusters for different Event Hubs inside Azure
+  databricks running individual spark jobs which extract, transform and
+  store data in Apache Parquet format in Azure Data Lake.
+
+- From each of these spark jobs, we also send some important progress
+  metrics to a Graphite instance. We run Grafana instance on top of
+  Graphite which provides interactive monitoring dashboards.
+
+- We create another analytics cluster inside Databricks which reads our
+  stored data, performs key analysis, aggregates information and stores
+  it in a PostgreSQL DB. 
+  
+- The aggregated data is used in a React App for creating dashboards and
+   visualizations.
+
+
+### Web app
+
+Even though there are tools for data visualization (PowerBI, Tableau)
+they do not give us the desired level of flexibility when specific
+customer requirements have to be fulfilled. For this reason we decided
+to use ReactJS for the frontend and postgreSQL for data storage.
+
+The React based UI is able to change data, without reloading the page.
+It is fast, scalable, and simple. The rendering of the 3D graphics is
+done with libraries like
+[React-map-gl](https://uber.github.io/react-map-gl/#/) and
+[Deck-gl](https://deck.gl/#/). 
+
+
+The backend of the app is fetching data from the PostgreSQL DB which is
+then visualized. The postGIS extension of a PostgreSQL DB allows us to
+do efficient location queries. A typical example is finding points of
+interest within a given distance from a given point or from a vehicle
+driving trajectory. To these results we can add results from using other
+APIs like Google Places.
+
+A detailed explanation of the application capabilities with screenshots 
+can be found below:
+
+#### Explore individual vehicle trips
 
  - Trajectory of a vehicle for a given time period     
     The trajectory is divided 
@@ -67,7 +112,7 @@ Examples can be found in the screenshots below:
    <br>
    <img src="data/figures/tdh/react_vis_a4.png" alt="react ui 4" width="720"/>
 
-### Explore areas where vehicles tend to stop
+#### Explore areas where vehicles tend to stop
 
 For every selected hexagon the user can see:
    
@@ -79,3 +124,36 @@ For every selected hexagon the user can see:
  vehicles tend to stop in this area.
  <br>
  <img src="data/figures/tdh/react_vis_a5.jpg" alt="react ui 5" width="720"/>
+
+## Possible project extensions:
+
+Given the amount and quality of data being collected there are a lot of
+directions in which a project can be extended and a lot of improvements
+that can be added to the UI:
+
+- Data augmentation:
+  * the gps data stream is not consistent; by using map-matching tools
+    like [Barefoot](https://github.com/bmwcarit/barefoot) or
+    [GraphHopper](https://github.com/graphhopper/map-matching) we can
+    reliably guess which route the vehicle has used if there are any
+    time gaps in the gps data stream;
+
+- New information obtained from data analysis:
+  * fuel consumption, vehicle load capacity utilization
+
+- Predictions from supervised/unsupervised ML models:
+
+  * predict and visualize the possible vehicle routes. 
+
+  * display possible shipping orders that can be taken by the truck by 
+    taking into account the truck position at a given time.
+
+- Real time analysis and data collection: at the moment, the data is
+  processed in batches but the adjustment of the visualization ideas to
+  real-time data processing and online ML is feasible.
+
+## Tech stack
+
+- Azure Databricks, pySpark, Scala 
+- React, PostgreSQL 
+- Graphite, Grafana
