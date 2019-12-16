@@ -1,6 +1,6 @@
-# Stream and plot billions of GPS points
+# Data Hub
 
-*Data hub* is a cloud implementation of scalable processing, storing, analyzing and visualization data pipeline focused on finding geographical points of interest.
+*Data hub* is a cloud implementation of scalable processing, storing, analyzing and visualization data pipeline focused on finding geographical points of interest from billions of streaming GPS data points.
 
 ## Motivation
 

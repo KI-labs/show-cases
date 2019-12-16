@@ -2,7 +2,7 @@
 
 ---
 
-#Where Weight
+## Where Weight
 
 Technical product documentations, like engineering drawings, have standards for sizes and layout of drawing sheets (ISO 5457). Nevertheless, finding and getting information from these unstructured data sources like images, scanned documents is a quite challenging and prevailing issue. Existing solutions like AutoCAD, Adobe or cloud OCR (Optical Character Recognition) don’t work well enough for specific tasks because of their too generic approach. This makes building an OCR (Optical Character Recognition) system for a specific goal relevant and actual task.
 
@@ -14,7 +14,7 @@ With Where Weight we demonstrate an approach of extracting data from various eng
 
 ---
 
-#What Benz
+## What Benz
 
 Automotive giants are already very experienced in marketing their cars from best possible perspectives. Over the years they all developed their ways of giving information to their user base, especially with the help of digital media. But the approach is getting old, since it is focusing on the approach “making people want a car” instead of “making cars people want”.
 
@@ -26,7 +26,7 @@ We twisted that approach for Mercedes Benz Cars to see which car models are the 
 
 ---
 
-#Stream and plot billions of GPS points
+## Data Hub
 
 World-wide car manufactures have been building different type of vehicles over 100 years. In the last decades, some of them have been collecting billions of data points from dozens of built-in sensors, from hundreds of thousands cars and time points. They believed knowing where the vehicles are stopping by would open different horizons for their next generation digital services.
 
@@ -35,4 +35,4 @@ Our approach primarily was to get the data, crunch it and detect where car/truck
 \#anonymization #geolocation #trucks
 
 
-[Learn more about this project ...](pages/tdh.md) 
+[Learn more about Data Hub ...](pages/tdh.md) 
