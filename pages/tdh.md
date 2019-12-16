@@ -129,7 +129,7 @@ For every selected hexagon the user can see:
  <br>
  <img src="data/figures/tdh/react_vis_a5.jpg" alt="react ui 5" width="720"/>
 
-## Possible project extensions:
+## Possible project extensions
 
 Given the amount and quality of data being collected there are a lot of
 directions in which a project can be extended and a lot of improvements
