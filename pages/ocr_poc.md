@@ -64,7 +64,7 @@ The solution also uses an additional algorithm that applies to a list of boundin
     
     The cases where the weight value and weight unit are in the same/different bounding boxes are supported. For example, in case when the weight unit and weight value are in the same bounding box the following patterns can be detected: `2.35 g`, `3.78 kg`, `7,87 kg`, `9 g`.
 
-## Future improvements
+## Possible project improvements
 
 In general, *Where Weight* solution can be extended to extract any specific information from a technical drawing: like the name of an element, a date, an author, key-value pairs, etc.
 

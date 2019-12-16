@@ -2,7 +2,7 @@
 *What Benz* is a deep learning-based solution for recognizing Mercedes Benz cars from pictures taken using a mobile app.
 
 <p align="center">
-    <img src="images/what_benz_poc.png" alt="what benz poc" width="720px" align="middle"/>
+    <img src="data/figures/what_benz_poc.png" alt="what benz poc" width="720px" align="middle"/>
 </p>
 
 ## Introduction
@@ -26,7 +26,7 @@ Some usecases where *What Benz* app could be used:
 It is straight forward. The user runs the app and takes a picture of a car on the street. The app sends a request to the backend where the model runs. The model predicts the most appropriate class of vehicle and sends back to the user the prediction together with all relevant information about the model.
 
 <p align="center">
-    <img src="images/what-benz-workflow.png" alt="what benz workflow" width="920px" align="middle"/>
+    <img src="data/figures/what-benz-workflow.png" alt="what benz workflow" width="920px" align="middle"/>
 </p>
 
 ## Technical overview
@@ -36,7 +36,7 @@ A standard pre-trained [ResNet34](https://github.com/pytorch/vision/blob/master/
 This [kaggle kernel](https://www.kaggle.com/jupyternotebook/accuracy-85-with-fast-ai-in-4-epoches) could be an example how to train the a model on the [Standford](https://ai.stanford.edu/~jkrause/cars/car_dataset.html) car dataset, which contains of 16,185 images and 196 classes of cars.
 
 <p align="center">
-    <img src="images/resnet34.png" alt="ResNet34" width="920px" align="middle"/>
+    <img src="data/figures/resnet34.png" alt="ResNet34" width="920px" align="middle"/>
 </p>
 
 ### Collecting custom data
@@ -55,11 +55,11 @@ The quality of the fine-tuned model reaches 86%
 
 
 <p align="center">
-    <img src="images/fine_tunning.png" alt="fine-tuning" width="720px" align="middle"/>
+    <img src="data/figures/fine_tunning.png" alt="fine-tuning" width="720px" align="middle"/>
 </p>
 
 <p align="center">
-    <img src="images/accuracy.png" alt="accuracy" width="720px" align="middle"/>
+    <img src="data/figures/accuracy.png" alt="accuracy" width="720px" align="middle"/>
 </p>
 
 ### Serving the model
@@ -70,7 +70,7 @@ Fine-tuned model was served using `Azure ML Services`. This [tutorial](https://d
 
 K-Means clustering method was used to group the Mercedes Benz cars into different clusters. The clustering was done based on the car's properties such as body type, model, price, etc.
 
-## Future improvements
+## Possible improvements
 
 Extending the current solution with additional data sources (about user, location, market, etc.) will enable more use-cases for *What Benz*, for example:
 - recommend a specific car based on a history of taken pictures
