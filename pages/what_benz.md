@@ -5,7 +5,7 @@
     <img src="data/figures/what_benz_poc.png" alt="what benz poc" width="720px" align="middle"/>
 </p>
 
-## Introduction
+## Motivation
 The variety and the similarities between the cars model make recognizing a particular car’s model a challenge for many people. Imagine a scenario where a person sees a car on the street and likes it. The person would take a picture of the vehicle, search for it somewhere on the internet or by asking a car dealer, explore some properties such as the engine, number of sets, possible colors, and finally get immediately informed about the price range for different options. *What Benz* saves you your valuable time and puts all that information just in a few seconds in your hand by just taking a picture of the car.
 
 In this version of the app, we are using two types of approaches:

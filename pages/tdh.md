@@ -1,11 +1,15 @@
-# Collection, preprocessing and visualization of vehicle telematics data
+# Stream and plot billions of GPS points
 
-The task of the project was to collect and store vehicle telematics data
-from several continents in a way that the access control among members
-of a big organization can be easily managed and different data-supported
+*Data hub* is a cloud implementation of scalable processing, storing, analyzing and visualization data pipeline focused on finding geographical points of interest.
+
+## Motivation
+
+Analysing vehicle telematic data could open a new horisonts for car manufactures like route optimisation, predictive maintenance, driver behaviour detection, etc.
+
+In this project we built a system to collect and store world-wide vehicle telematics data in a way that different data-supported
 ideas/hypotheses can be rapidly tested.
 
-In the following we will describe a use-case derived from analysing the
+Here we are focusing on a use-case derived from analysing the
 data that was collected: the determination and visualization of the
 places where the vehicles tend to stop, to fuel, to load unload goods;
 as well as gathering an additional information about the these places. 

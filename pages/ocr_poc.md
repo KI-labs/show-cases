@@ -4,7 +4,7 @@
 
 <img width="800" alt="teaser" src="./data/figures/example.gif">
 
-## Introduction
+## Motivation
 Finding and getting information from unstructured data sources like images, drawings, scanned documents is a quite challenging and non-trivial task. Existing solutions like AutoCAD, Adobe or cloud OCR (Azure/AWS/GCP) don't work well enough for specific tasks because of their too generic approach.
 
 Adopting a standard approach for the real-life situation may also require manual post-processing which makes document processing workflow not scalable. Or an addition preprocessing step to improve the quality of data extraction: sometimes an input document may have a poor resolution or could also be taken at a certain angle which makes generic approaches not applicable directly. 
